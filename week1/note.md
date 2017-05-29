@@ -17,4 +17,5 @@
   * clone the git `git clone`
   * put file to staging area `git add -A`
   * commit to git `git commit -m`
-  * push it up to git hub `git push orign master`
+  * push it up to git hub `git push origin master`
+  * push git to your own repo `git push -u origin master`
