@@ -14,8 +14,8 @@
 
 - #### Git hub
 
-  * clone the git `git clone`
+  * clone the git `git clone <url>`
   * put file to staging area `git add -A`
   * commit to git `git commit -m <"message">`
   * push it up to git hub `git push origin master`
-  * push git to your own repo `git push -u origin master`
+  * ~~push git to your own repo `git push -u origin master`~~
