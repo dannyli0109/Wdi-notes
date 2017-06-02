@@ -151,11 +151,173 @@ for (var num = 1; num <= max; num ++) {
   }
 }
 ```
-output: 
+output:
 ```
      $
     $$$
    $$$$$
   $$$$$$$
  $$$$$$$$$
+```
+## day3
+- array functions
+- functions
+
+## day4
+- typeof : check the type of a variable
+
+```javascript
+// function expression
+var doubleMe = function(number) {
+  return number + number
+}
+
+// function declaration
+// function doubleMe(number) {
+//   return number + number
+// }
+
+console.log(doubleMe(5));
+
+// passing multiple parameter will ignore the first one
+console.log(doubleMe(10, 2))
+
+var calmYourself = function(stuff) {
+  return stuff.toLowerCase().replace("!", "")
+}
+
+console.log(calmYourself("NOOOOOOOOO!"));
+
+var launchMissile = function() {
+  var numberOfMissile = 3;
+
+  console.log(numberOfMissiles + " missiles launched");
+  console.log("missed all targets");
+}
+
+```
+
+- exercise
+```javascript
+// 1. Write a function named calculateAge that:
+// - takes 2 arguments: birth year, current year.
+// - calculates the 2 possible ages based on those years.
+// outputs the result to the screen like so: "You are either 100 or 101"
+// - Call the function three times with different sets of values.
+
+// your code here
+
+var calculateAge = function(birthYear, currentYear) {
+
+  if (currentYear > birthYear) {
+    return "You are either " + (currentYear - birthYear - 1) + " or " + (currentYear - birthYear) + " years old"
+  } else if (currentYear === birthYear) {
+    return "You were born this year"
+  } else {
+    return "You haven't born yet"
+  }
+
+
+
+}
+console.log(calculateAge(1993, 2017));
+console.log(calculateAge(2017, 2017));
+console.log(calculateAge(2018, 2017));
+
+//  2. Write a function `lengths` that accepts a single parameter as an argument, namely
+// an array of strings. The function should return an array of numbers where each
+// number is the length of the corresponding string.
+
+// your code here
+var arr = ["A","ab","abc","sdhaskjdkash"]
+
+var lengths = function(stringArray) {
+  var returnArray = []
+  for (var index = 0; index < stringArray.length; index ++) {
+    returnArray.push(stringArray[index].split('').length)
+  }
+  return returnArray
+}
+console.log(lengths(arr));
+
+// 3. Write a Javascript function called `transmogrifier`
+// This function should accept three arguments, which you can assume will be numbers.
+// Your function should return the "transmogrified" result
+//
+// The transmogrified result of three numbers is the product of the first two numbers,
+// raised to the power of the third number.
+
+// your code here
+var transmogrifier = function(first, second, third) {
+  return Math.pow((first * second), third)
+}
+
+console.log(transmogrifier(2,2,3));
+
+// 4. Write a function `wordReverse` that accepts a single argument, a string. The
+// method should return a string with the order of the words reversed. Don't worry
+// about punctuation.
+
+// your code here
+var wordReverse = function(inputString) {
+    return inputString.split(" ").reverse().join(" ");
+}
+console.log(wordReverse("apple pen"));
+```
+
+
+## day5
+#### how to solve a problem
+- Visulise
+  - Flow diagram
+- Algorithm
+- Implementation
+
+#### using js to change background color
+```javascript
+// find the button
+var btn = document.getElementsByTagName('button')[0]
+
+// find the body (entire page)
+var body = document.body;
+
+// listen to the click event
+
+// add event listener is a function that takes 2 arguments. first one is the event,
+// second argemnet is a function
+var colorChanged = false
+var changeColour = function() {
+  colorChanged = !colorChanged
+  document.body.style.backgroundColor = colorChanged ? randomRgbColor() : "white"
+}
+
+
+body.addEventListener("click", changeColour)
+
+
+function randomRgbColor() {
+  var r = Math.floor(Math.random() * 256)
+  var g = Math.floor(Math.random() * 256)
+  var b = Math.floor(Math.random() * 256)
+  return "rgb(" + r + "," + g + "," + b +  ")"
+}
+
+```
+
+#### forloop optional
+```javascript
+var i = 0;
+for (;i < 3;) {
+  console.log(i);
+  i++
+}
+```
+
+- any variable that is not defined inside a function, it is global
+
+- object
+```javascript
+var fruit = {}
+fruit.apple = 200
+fruit["mango"] = 300
 ```
