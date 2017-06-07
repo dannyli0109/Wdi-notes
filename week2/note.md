@@ -104,3 +104,30 @@ ul {
   align-content: center;
   flex-direction: column;
 ```
+
+## Day 3
+#### regular expression
+ - `/[^\w]|/g`  `^\w` -> not a word
+- regexr.com
+
+#### html & javascript
+- advance positioning
+- document object model (dom)
+- finding/ searching/ quering objects
+  - `document.getElementsByTagName("h1")`
+- query selector
+  - using css selector
+  - `document.querySelector('h1')`
+  - `document.querySelector(".ttile").textConetnt` gives you the text of the content
+  - style
+    - `document.querySelector(".title").style.backgroundColor = "blue"`
+- query selector for objects
+  - `document.querySelectorAll(".title")[0].style.backgroundColor = "blue"`
+  - `document.querySelectorAll("input")[0].value` is the value of the text field
+- event listener
+```javascript
+var btn = document.querySelector('button');
+btn.addEventListener("click", function() {
+  console.log('win')
+})
+```
